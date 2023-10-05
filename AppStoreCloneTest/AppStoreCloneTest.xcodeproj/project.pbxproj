@@ -25,6 +25,8 @@
 		8F94BF932ACF37A50024365B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF922ACF37A50024365B /* NetworkService.swift */; };
 		8F94BF952ACF37E80024365B /* Publisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF942ACF37E80024365B /* Publisher+Extension.swift */; };
 		8F94BF972ACF38FC0024365B /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF962ACF38FB0024365B /* Tab.swift */; };
+		8F94BF992ACF39890024365B /* AppSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF982ACF39890024365B /* AppSearchResult.swift */; };
+		8F94BF9B2ACF3C5B0024365B /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF9A2ACF3C5B0024365B /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		8F94BF922ACF37A50024365B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		8F94BF942ACF37E80024365B /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
 		8F94BF962ACF38FB0024365B /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		8F94BF982ACF39890024365B /* AppSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchResult.swift; sourceTree = "<group>"; };
+		8F94BF9A2ACF3C5B0024365B /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				8F94BF962ACF38FB0024365B /* Tab.swift */,
+				8F94BF982ACF39890024365B /* AppSearchResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			children = (
 				8F94BF902ACF37880024365B /* Resource.swift */,
 				8F94BF922ACF37A50024365B /* NetworkService.swift */,
+				8F94BF9A2ACF3C5B0024365B /* UserDefaultsManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -361,11 +367,13 @@
 				8F94BF912ACF37880024365B /* Resource.swift in Sources */,
 				8F94BF8F2ACF37250024365B /* String+Extension.swift in Sources */,
 				8F94BF972ACF38FC0024365B /* Tab.swift in Sources */,
+				8F94BF992ACF39890024365B /* AppSearchResult.swift in Sources */,
 				8F94BF952ACF37E80024365B /* Publisher+Extension.swift in Sources */,
 				8F94BF4F2ACF32D00024365B /* MainTabView.swift in Sources */,
 				8F94BF832ACF34B70024365B /* SearchViewModel.swift in Sources */,
 				8F94BF7F2ACF34800024365B /* AppDetailView.swift in Sources */,
 				8F94BF7D2ACF34710024365B /* SearchResultListCell.swift in Sources */,
+				8F94BF9B2ACF3C5B0024365B /* UserDefaultsManager.swift in Sources */,
 				8F94BF7B2ACF34210024365B /* SearchResultListView.swift in Sources */,
 				8F94BF4D2ACF32D00024365B /* AppStoreCloneTestApp.swift in Sources */,
 				8F94BF792ACF33DD0024365B /* SearchTabView.swift in Sources */,
