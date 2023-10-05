@@ -14,6 +14,11 @@
 		8F94BF5E2ACF32D20024365B /* AppStoreCloneTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF5D2ACF32D20024365B /* AppStoreCloneTestTests.swift */; };
 		8F94BF682ACF32D20024365B /* AppStoreCloneTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF672ACF32D20024365B /* AppStoreCloneTestUITests.swift */; };
 		8F94BF6A2ACF32D20024365B /* AppStoreCloneTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF692ACF32D20024365B /* AppStoreCloneTestUITestsLaunchTests.swift */; };
+		8F94BF792ACF33DD0024365B /* SearchTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF782ACF33DD0024365B /* SearchTabView.swift */; };
+		8F94BF7B2ACF34210024365B /* SearchResultListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF7A2ACF34210024365B /* SearchResultListView.swift */; };
+		8F94BF7D2ACF34710024365B /* SearchResultListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF7C2ACF34710024365B /* SearchResultListCell.swift */; };
+		8F94BF7F2ACF34800024365B /* AppDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF7E2ACF34800024365B /* AppDetailView.swift */; };
+		8F94BF832ACF34B70024365B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF822ACF34B70024365B /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		8F94BF632ACF32D20024365B /* AppStoreCloneTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppStoreCloneTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F94BF672ACF32D20024365B /* AppStoreCloneTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreCloneTestUITests.swift; sourceTree = "<group>"; };
 		8F94BF692ACF32D20024365B /* AppStoreCloneTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreCloneTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F94BF782ACF33DD0024365B /* SearchTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabView.swift; sourceTree = "<group>"; };
+		8F94BF7A2ACF34210024365B /* SearchResultListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultListView.swift; sourceTree = "<group>"; };
+		8F94BF7C2ACF34710024365B /* SearchResultListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultListCell.swift; sourceTree = "<group>"; };
+		8F94BF7E2ACF34800024365B /* AppDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailView.swift; sourceTree = "<group>"; };
+		8F94BF822ACF34B70024365B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +105,12 @@
 			isa = PBXGroup;
 			children = (
 				8F94BF4C2ACF32D00024365B /* AppStoreCloneTestApp.swift */,
-				8F94BF4E2ACF32D00024365B /* MainTabView.swift */,
-				8F94BF502ACF32D20024365B /* Assets.xcassets */,
+				8F94BF862ACF35EC0024365B /* Utils */,
+				8F94BF852ACF35D90024365B /* Service */,
+				8F94BF772ACF33B90024365B /* View */,
+				8F94BF842ACF35C20024365B /* Model */,
+				8F94BF812ACF34A00024365B /* ViewModel */,
+				8F94BF762ACF33A80024365B /* Resource */,
 				8F94BF522ACF32D20024365B /* Preview Content */,
 			);
 			path = AppStoreCloneTest;
@@ -125,6 +139,71 @@
 				8F94BF692ACF32D20024365B /* AppStoreCloneTestUITestsLaunchTests.swift */,
 			);
 			path = AppStoreCloneTestUITests;
+			sourceTree = "<group>";
+		};
+		8F94BF762ACF33A80024365B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8F94BF502ACF32D20024365B /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8F94BF772ACF33B90024365B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F94BF4E2ACF32D00024365B /* MainTabView.swift */,
+				8F94BF802ACF348C0024365B /* SearchTab */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F94BF802ACF348C0024365B /* SearchTab */ = {
+			isa = PBXGroup;
+			children = (
+				8F94BF782ACF33DD0024365B /* SearchTabView.swift */,
+				8F94BF7A2ACF34210024365B /* SearchResultListView.swift */,
+				8F94BF7C2ACF34710024365B /* SearchResultListCell.swift */,
+				8F94BF7E2ACF34800024365B /* AppDetailView.swift */,
+			);
+			path = SearchTab;
+			sourceTree = "<group>";
+		};
+		8F94BF812ACF34A00024365B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8F94BF822ACF34B70024365B /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8F94BF842ACF35C20024365B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F94BF852ACF35D90024365B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8F94BF862ACF35EC0024365B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8F94BF872ACF35F30024365B /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8F94BF872ACF35F30024365B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +337,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F94BF4F2ACF32D00024365B /* MainTabView.swift in Sources */,
+				8F94BF832ACF34B70024365B /* SearchViewModel.swift in Sources */,
+				8F94BF7F2ACF34800024365B /* AppDetailView.swift in Sources */,
+				8F94BF7D2ACF34710024365B /* SearchResultListCell.swift in Sources */,
+				8F94BF7B2ACF34210024365B /* SearchResultListView.swift in Sources */,
 				8F94BF4D2ACF32D00024365B /* AppStoreCloneTestApp.swift in Sources */,
+				8F94BF792ACF33DD0024365B /* SearchTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
