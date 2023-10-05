@@ -8,13 +8,40 @@
 import SwiftUI
 
 struct SearchResultListView: View {
+    
+    @EnvironmentObject private var viewModel: SearchViewModel
+    @State private var showDetail: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVStack {
+                ForEach(viewModel.searchResults, id: \.trackId) { app in
+                        SearchResultListCell(app: app)
+                        .onTapGesture {
+                            viewModel.selectedApp = app
+                            showDetail = true
+                        }
+                }
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .searchable(
+            text: $viewModel.searchText,
+            placement: .navigationBarDrawer(displayMode: .always)
+        )
+        .autocorrectionDisabled()
+        .onDisappear {
+            UIApplication.shared.endEditing()
+        }
+        .navigationDestination(isPresented: $showDetail, destination: {
+            AppDetailView()
+        })
     }
 }
 
 struct SearchResultListView_Previews: PreviewProvider {
     static var previews: some View {
         SearchResultListView()
+            .environmentObject(SearchViewModel())
     }
 }

@@ -27,6 +27,7 @@
 		8F94BF972ACF38FC0024365B /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF962ACF38FB0024365B /* Tab.swift */; };
 		8F94BF992ACF39890024365B /* AppSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF982ACF39890024365B /* AppSearchResult.swift */; };
 		8F94BF9B2ACF3C5B0024365B /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF9A2ACF3C5B0024365B /* UserDefaultsManager.swift */; };
+		8F94BF9D2ACF3EA70024365B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94BF9C2ACF3EA70024365B /* UIApplication+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		8F94BF962ACF38FB0024365B /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		8F94BF982ACF39890024365B /* AppSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchResult.swift; sourceTree = "<group>"; };
 		8F94BF9A2ACF3C5B0024365B /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		8F94BF9C2ACF3EA70024365B /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			children = (
 				8F94BF8E2ACF37240024365B /* String+Extension.swift */,
 				8F94BF942ACF37E80024365B /* Publisher+Extension.swift */,
+				8F94BF9C2ACF3EA70024365B /* UIApplication+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				8F94BF9B2ACF3C5B0024365B /* UserDefaultsManager.swift in Sources */,
 				8F94BF7B2ACF34210024365B /* SearchResultListView.swift in Sources */,
 				8F94BF4D2ACF32D00024365B /* AppStoreCloneTestApp.swift in Sources */,
+				8F94BF9D2ACF3EA70024365B /* UIApplication+Extension.swift in Sources */,
 				8F94BF792ACF33DD0024365B /* SearchTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
