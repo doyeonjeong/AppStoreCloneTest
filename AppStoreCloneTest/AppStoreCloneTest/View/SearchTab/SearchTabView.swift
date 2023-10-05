@@ -16,6 +16,10 @@ struct SearchTabView: View {
         NavigationStack {
             List {
                 if !viewModel.isSearching {
+                    Text("최근 검색어")
+                        .font(.title3)
+                        .bold()
+                    
                     ForEach(viewModel.recentResults(), id: \.self) { recent in
                         Text("\(recent)")
                             .onTapGesture {
