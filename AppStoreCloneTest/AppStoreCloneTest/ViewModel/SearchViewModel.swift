@@ -18,7 +18,7 @@ final class SearchViewModel: ObservableObject {
     @Published var searchText: String = ""
     
     /// 선택된 앱 정보
-    @Published var selectedApp: AppInfo = AppInfo(id: 0, censoredName: "", appDescription: "", appVersion: "", releaseNotes: "", mainCategory: "", smallIconUrl: "", largeIconUrl: "", developerName: "", screenshotUrls: [], supportedLanguages: [], contentRating: "")
+    @Published var selectedApp: AppInfo = AppInfo()
     
     /// API로부터 받아온 원본 검색 결과 리스트
     @Published var searchResults: [AppInfo] = []

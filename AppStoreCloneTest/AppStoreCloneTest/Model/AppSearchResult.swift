@@ -25,7 +25,7 @@ struct AppInfo: Decodable, Hashable {
     let screenshotUrls: [String]
     let supportedLanguages: [String] // 지원하는 언어
     let contentRating: String // 지원하는 연령
-
+    
     enum CodingKeys: String, CodingKey {
         case id = "trackId"
         case censoredName = "trackCensoredName"
@@ -39,6 +39,34 @@ struct AppInfo: Decodable, Hashable {
         case screenshotUrls
         case supportedLanguages = "languageCodesISO2A"
         case contentRating = "trackContentRating"
+    }
+    
+    init(
+        id: Int = 0,
+        censoredName: String = "",
+        appDescription: String = "",
+        appVersion: String = "",
+        releaseNotes: String = "",
+        mainCategory: String = "",
+        smallIconUrl: String = "",
+        largeIconUrl: String = "",
+        developerName: String = "",
+        screenshotUrls: [String] = [],
+        supportedLanguages: [String] = [],
+        contentRating: String = ""
+    ) {
+        self.id = id
+        self.censoredName = censoredName
+        self.appDescription = appDescription
+        self.appVersion = appVersion
+        self.releaseNotes = releaseNotes
+        self.mainCategory = mainCategory
+        self.smallIconUrl = smallIconUrl
+        self.largeIconUrl = largeIconUrl
+        self.developerName = developerName
+        self.screenshotUrls = screenshotUrls
+        self.supportedLanguages = supportedLanguages
+        self.contentRating = contentRating
     }
 }
 
