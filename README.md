@@ -1,5 +1,8 @@
 # AppStoreCloneTest
 
+![Simulator Screen Recording - iPhone 15 Pro - 2024-01-12 at 14 24 56](https://github.com/doyeonjeong/AppStoreCloneTest/assets/108422901/bb949b55-d715-4f2d-a73d-39ff10c02f89)
+
+
 ## Technologies
 
 - Swift 5.8.1
