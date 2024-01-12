@@ -18,7 +18,7 @@ final class SearchViewModel: ObservableObject {
     @Published var searchText: String = ""
     
     /// 선택된 앱 정보
-    @Published var selectedApp: AppInfo = AppInfo(trackId: 0, trackCensoredName: "", description: "", version: "", currentVersionReleaseDate: "", primaryGenreName: "", artworkUrl60: "", artworkUrl512: "", artistName: "", screenshotUrls: [], languageCodesISO2A: [], trackContentRating: "")
+    @Published var selectedApp: AppInfo = AppInfo(id: 0, censoredName: "", appDescription: "", appVersion: "", releaseNotes: "", mainCategory: "", smallIconUrl: "", largeIconUrl: "", developerName: "", screenshotUrls: [], supportedLanguages: [], contentRating: "")
     
     /// API로부터 받아온 원본 검색 결과 리스트
     @Published var searchResults: [AppInfo] = []
@@ -32,6 +32,10 @@ final class SearchViewModel: ObservableObject {
     
     init() {
         addSubscribers() // 초기화 시점에 구독 시작
+    }
+    
+    deinit {
+        subscriptions.removeAll()
     }
     
     /// 구독을 처리하는 메서드
@@ -53,7 +57,7 @@ final class SearchViewModel: ObservableObject {
         let search = searchText.lowercased()
         
         filteredResults = searchResults.filter { app in
-            let artistNameContainsSearch = app.artistName.lowercased().contains(search)
+            let artistNameContainsSearch = app.developerName.lowercased().contains(search)
             return artistNameContainsSearch
         }
     }
@@ -65,7 +69,7 @@ final class SearchViewModel: ObservableObject {
     func recentResults() -> [String] {
         return userDefaultsManager.fetchRecentKeywords()
     }
-
+    
     func loadResult(keyword: String) {
         let resource = Resource<AppSearchResult>(
             base: "https://itunes.apple.com/",
