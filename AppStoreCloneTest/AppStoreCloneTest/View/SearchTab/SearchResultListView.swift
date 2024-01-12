@@ -15,7 +15,7 @@ struct SearchResultListView: View {
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(viewModel.searchResults, id: \.trackId) { app in
+                ForEach(viewModel.searchResults, id: \.id) { app in
                         SearchResultListCell(app: app)
                         .onTapGesture {
                             viewModel.selectedApp = app

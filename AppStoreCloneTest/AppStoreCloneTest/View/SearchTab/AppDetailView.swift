@@ -30,7 +30,7 @@ struct AppDetailView: View {
     
     private var baseInformation: some View {
         HStack {
-            AsyncImage(url: URL(string: viewModel.selectedApp.artworkUrl512)) { phase in
+            AsyncImage(url: URL(string: viewModel.selectedApp.largeIconUrl)) { phase in
                 if let image = phase.image {
                     image.resizable()
                 } else if phase.error != nil {
@@ -44,14 +44,14 @@ struct AppDetailView: View {
             .cornerRadius(20)
             
             VStack(alignment: .leading) {
-                Text(viewModel.selectedApp.trackCensoredName)
+                Text(viewModel.selectedApp.censoredName)
                     .font(.title)
                     .bold()
                     .foregroundColor(.primary)
                     .lineLimit(1)
                     .truncationMode(.tail)
                 
-                Text(viewModel.selectedApp.artistName)
+                Text(viewModel.selectedApp.developerName)
                     .font(.headline)
                     .foregroundColor(.secondary)
                     .lineLimit(1)
@@ -107,7 +107,7 @@ struct AppDetailView: View {
     private func contentForType(_ contentType: ContentType) -> some View {
         switch contentType {
         case .age:
-            Text(viewModel.selectedApp.trackContentRating)
+            Text(viewModel.selectedApp.contentRating)
                 .font(.system(size: 28, weight: .bold, design: .rounded))
                 .foregroundColor(.gray)
             
@@ -122,18 +122,18 @@ struct AppDetailView: View {
                 .frame(width: 26)
                 .foregroundColor(.gray)
             
-            Text(viewModel.selectedApp.artistName)
+            Text(viewModel.selectedApp.developerName)
                 .foregroundColor(.gray)
                 .font(.subheadline)
                 .lineLimit(1)
                 .truncationMode(.tail)
 
         case.language:
-            Text(viewModel.selectedApp.languageCodesISO2A[0])
+            Text(viewModel.selectedApp.supportedLanguages[0])
                   .font(.system(size: 28, weight:.bold, design:.rounded))
                   .foregroundColor(.gray)
-            let count = viewModel.selectedApp.languageCodesISO2A.count
-            let text = count > 2 ? "+ \(count - 1)개 언어" : "\(viewModel.selectedApp.languageCodesISO2A[0])".localized
+            let count = viewModel.selectedApp.supportedLanguages.count
+            let text = count > 2 ? "+ \(count - 1)개 언어" : "\(viewModel.selectedApp.supportedLanguages[0])".localized
             Text(text)
                 .foregroundColor(.gray)
                 .font(.subheadline)
@@ -190,7 +190,7 @@ struct AppDetailView: View {
                     Button {
                         // TODO: NavigationLink로 변경 -> 개발자가 만든 앱 정보 push
                     } label: {
-                        Text(viewModel.selectedApp.artistName)
+                        Text(viewModel.selectedApp.developerName)
                             .font(.body)
                     }
                     .padding(.vertical, 4)
@@ -211,13 +211,13 @@ struct AppDetailView: View {
     private var discriptionCell: some View {
         HStack(alignment: .bottom) {
             if !expanded {
-                Text(viewModel.selectedApp.description)
+                Text(viewModel.selectedApp.appDescription)
                     .lineLimit(3)
                     .truncationMode(.tail)
                 toggleButton
                     .padding(.leading, -60)
             } else {
-                Text(viewModel.selectedApp.description)
+                Text(viewModel.selectedApp.appDescription)
             }
         }
     }

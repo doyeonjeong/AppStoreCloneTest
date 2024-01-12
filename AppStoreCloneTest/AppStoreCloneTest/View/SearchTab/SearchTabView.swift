@@ -38,10 +38,10 @@ struct SearchTabView: View {
                 placement: .navigationBarDrawer(displayMode: .always),
                 prompt: "App Store"
             ) {
-                ForEach(viewModel.filteredResults, id: \.trackId) { info in
+                ForEach(viewModel.filteredResults, id: \.id) { info in
                     HStack {
-                        Text(info.trackCensoredName)
-                            .searchCompletion(info.trackCensoredName)
+                        Text(info.censoredName)
+                            .searchCompletion(info.censoredName)
                     }
                 }
             }

@@ -20,17 +20,17 @@ struct SearchResultListCell: View {
     @ViewBuilder
     private var baseInformation: some View {
         HStack {
-            AsyncImage(url: URL(string: app.artworkUrl60))
+            AsyncImage(url: URL(string: app.smallIconUrl))
                 .cornerRadius(8)
             
             VStack(alignment: .leading) {
-                Text(app.trackCensoredName)
+                Text(app.censoredName)
                     .font(.headline)
                     .foregroundColor(.primary)
                     .lineLimit(1)
                     .truncationMode(.tail)
                 
-                Text(app.artistName)
+                Text(app.developerName)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .lineLimit(1)
@@ -76,18 +76,18 @@ struct SearchResultListCell: View {
 struct SearchResultListCell_Previews: PreviewProvider {
     static var previews: some View {
         SearchResultListCell(app: AppInfo(
-            trackId: 1,
-            trackCensoredName: "trackCensoredName",
-            description: "Welcome to Relax On :) Relax On is an app where you can create your own relaxing music. Just select three kinds of sounds: Base, Melody, and White Noise, and then you will get a CD for the mixed sounds. While you're creating the music, illustrations for CD covers will be seen being made at the same time. You can control the volume of each sound to get the best mix. Create music, play it, set the timer, and enjoy for your own purpose: better sleep, meditation, study, work, and more.",
-            version: "3.0.2",
-            currentVersionReleaseDate: "currentVersionReleaseDate",
-            primaryGenreName: "primaryGenreName",
-            artworkUrl60: "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/a5/53/46/a553469d-16be-5646-7dc1-99874919811e/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/60x60bb.jpg",
-            artworkUrl512: "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/a5/53/46/a553469d-16be-5646-7dc1-99874919811e/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/512x512bb.jpg",
-            artistName: "artistName",
+            id: 1,
+            censoredName: "trackCensoredName",
+            appDescription: "Welcome to Relax On :) Relax On is an app where you can create your own relaxing music. Just select three kinds of sounds: Base, Melody, and White Noise, and then you will get a CD for the mixed sounds. While you're creating the music, illustrations for CD covers will be seen being made at the same time. You can control the volume of each sound to get the best mix. Create music, play it, set the timer, and enjoy for your own purpose: better sleep, meditation, study, work, and more.",
+            appVersion: "3.0.2",
+            releaseNotes: "currentVersionReleaseDate",
+            mainCategory: "primaryGenreName",
+            smallIconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/a5/53/46/a553469d-16be-5646-7dc1-99874919811e/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/60x60bb.jpg",
+            largeIconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/a5/53/46/a553469d-16be-5646-7dc1-99874919811e/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/512x512bb.jpg",
+            developerName: "artistName",
             screenshotUrls: [],
-            languageCodesISO2A: [],
-            trackContentRating: "4+")
+            supportedLanguages: [],
+            contentRating: "4+")
         )
     }
 }
